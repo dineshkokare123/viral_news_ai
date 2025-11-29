@@ -257,6 +257,11 @@ flutter analyze
 - [ ] **AI image generation** for posts (DALL-E integration)
 
 ---
+screenshots:
+
+[viral_news_ai.webm](https://github.com/user-attachments/assets/080385ab-15df-4738-885b-2c81aef0f165)
+
+
 
 ## 🤝 Contributing
 

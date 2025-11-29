@@ -269,7 +269,7 @@ flutter analyze
 ---
 screenshots:
 
-[viral_news_ai.webm](https://github.com/user-attachments/assets/080385ab-15df-4738-885b-2c81aef0f165)
+https://github.com/user-attachments/assets/28fca44f-4845-402e-9f87-15bbf7eeacab
 
 
 

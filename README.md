@@ -49,12 +49,22 @@ AI creates platform-specific content with:
 - **Apple Sign-In**
 - Animated splash screen & onboarding
 
+### 📊 **Analytics Dashboard**
+- **Performance Metrics**: Track views, engagement, and viral posts
+- **Visual Charts**: Interactive line and bar charts using `fl_chart`
+- **Platform Breakdown**: Analyze performance across different social networks
+
+### 💾 **Local Storage & Favorites**
+- **Save Articles**: Bookmark your favorite news stories for later
+- **Offline Access**: Access saved articles without internet
+- **Powered by Hive**: Fast and secure local storage
+
 ### 🎨 **Premium UI/UX**
-- Modern **dark theme** with glassmorphism
-- Smooth animations using `flutter_animate`
-- Custom fonts (Inter & Outfit via Google Fonts)
-- Responsive design
-- Loading states & shimmer effects
+- **Dark/Light Theme**: Toggle between modes with a single tap
+- **Glassmorphism**: Modern design elements
+- **Smooth Animations**: Using `flutter_animate`
+- **Custom Fonts**: Inter & Outfit via Google Fonts
+- **Responsive Design**: Optimized for all screen sizes
 
 ---
 
@@ -257,6 +267,11 @@ flutter analyze
 - [ ] **AI image generation** for posts (DALL-E integration)
 
 ---
+screenshots:
+
+https://github.com/user-attachments/assets/28fca44f-4845-402e-9f87-15bbf7eeacab
+
+
 
 ## 🤝 Contributing
 

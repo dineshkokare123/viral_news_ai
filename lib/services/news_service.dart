@@ -5,7 +5,7 @@ import '../models/news_article.dart';
 
 class NewsService {
   static const String _apiKey =
-      '80ee63dfe0c647cd9db15decb8f98e4a'; // Replace with your key
+      'HERE_YOUR_API_KEY'; // Replace with your key
   static const String _baseUrl = 'https://newsapi.org/v2';
 
   Future<List<NewsArticle>> fetchTrendingNews({

@@ -1,14 +1,30 @@
+import 'package:hive/hive.dart';
+
+part 'news_article.g.dart';
+
+@HiveType(typeId: 0)
 class NewsArticle {
+  @HiveField(0)
   final String id;
+  @HiveField(1)
   final String title;
+  @HiveField(2)
   final String description;
+  @HiveField(3)
   final String? content;
+  @HiveField(4)
   final String imageUrl;
+  @HiveField(5)
   final String source;
+  @HiveField(6)
   final DateTime publishedAt;
+  @HiveField(7)
   final String category;
+  @HiveField(8)
   final String? videoUrl;
+  @HiveField(9)
   double viralScore;
+  @HiveField(10)
   List<String> generatedHashtags;
 
   NewsArticle({

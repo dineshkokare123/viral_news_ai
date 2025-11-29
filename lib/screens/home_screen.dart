@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/app_provider.dart';
+import '../providers/theme_provider.dart';
 import '../widgets/news_card.dart';
+import 'analytics_screen.dart';
+import 'favorites_screen.dart';
 import 'news_detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -24,6 +27,43 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Viral News AI'),
         actions: [
+          Consumer<ThemeProvider>(
+            builder: (context, themeProvider, child) {
+              return IconButton(
+                icon: Icon(
+                  themeProvider.isDark ? Icons.light_mode : Icons.dark_mode,
+                ),
+                onPressed: () {
+                  themeProvider.toggleTheme();
+                },
+                tooltip: 'Toggle Theme',
+              );
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.bookmark),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FavoritesScreen(),
+                ),
+              );
+            },
+            tooltip: 'Favorites',
+          ),
+          IconButton(
+            icon: const Icon(Icons.analytics_outlined),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const AnalyticsScreen(),
+                ),
+              );
+            },
+            tooltip: 'Analytics',
+          ),
           IconButton(
             icon: const Icon(Icons.refresh),
             onPressed: () => context.read<AppProvider>().loadNews(),

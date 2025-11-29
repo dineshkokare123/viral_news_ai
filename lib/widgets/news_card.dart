@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:timeago/timeago.dart' as timeago;
 import '../models/news_article.dart';
+import '../providers/app_provider.dart';
 
 class NewsCard extends StatelessWidget {
   final NewsArticle article;
@@ -64,6 +66,33 @@ class NewsCard extends StatelessWidget {
                         ),
                       ],
                     ),
+                  ),
+                ),
+                Positioned(
+                  top: 12,
+                  left: 12,
+                  child: Consumer<AppProvider>(
+                    builder: (context, provider, child) {
+                      final isFavorite = provider.isFavorite(article.id);
+                      return Container(
+                        decoration: BoxDecoration(
+                          color: Colors.black.withOpacity(0.7),
+                          shape: BoxShape.circle,
+                        ),
+                        child: IconButton(
+                          icon: Icon(
+                            isFavorite ? Icons.bookmark : Icons.bookmark_border,
+                            color: isFavorite
+                                ? Theme.of(context).primaryColor
+                                : Colors.white,
+                            size: 20,
+                          ),
+                          onPressed: () {
+                            provider.toggleFavorite(article);
+                          },
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],

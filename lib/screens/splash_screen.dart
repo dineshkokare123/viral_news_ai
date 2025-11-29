@@ -36,7 +36,9 @@ class _SplashScreenState extends State<SplashScreen> {
             Container(
                   padding: const EdgeInsets.all(24),
                   decoration: BoxDecoration(
-                    color: Theme.of(context).primaryColor.withOpacity(0.1),
+                    color: Theme.of(
+                      context,
+                    ).primaryColor.withAlpha(25), // 0.1 * 255 ≈ 25
                     shape: BoxShape.circle,
                   ),
                   child: Icon(
@@ -50,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 .then(delay: 200.ms)
                 .shimmer(
                   duration: 1200.ms,
-                  color: Colors.white.withOpacity(0.5),
+                  color: Colors.white.withAlpha(128), // 0.5 * 255 = 128
                 )
                 .then(delay: 200.ms)
                 .shake(hz: 4, curve: Curves.easeInOutCubic),

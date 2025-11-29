@@ -63,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
       );
     } on PlatformException catch (e) {
-      print(e);
+      debugPrint('Biometric authentication error: $e');
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(

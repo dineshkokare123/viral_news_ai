@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import '../models/news_article.dart';
 
@@ -45,7 +46,7 @@ class NewsService {
         throw Exception('Failed to load news');
       }
     } catch (e) {
-      print('Error fetching news: $e');
+      debugPrint('Error fetching news: $e');
       return _getMockNews(); // Fallback to mock data
     }
   }

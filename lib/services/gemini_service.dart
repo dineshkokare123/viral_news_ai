@@ -3,7 +3,7 @@ import 'package:google_generative_ai/google_generative_ai.dart';
 import '../models/news_article.dart';
 
 class GeminiService {
-  static const String _apiKey = 'AIzaSyCMx7z3c6sPWoU2u-Rj02vhWGTccQenz68';
+  static const String _apiKey = 'YOUR_API_KEY';
   late final GenerativeModel _model;
 
   GeminiService() {
